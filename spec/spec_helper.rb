@@ -7,6 +7,7 @@ require File.join(File.dirname(__FILE__), '..', 'app.rb')
 require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
+require '/Users/vijaykurian/Projects/bookmark-manager/lib/bookmark'
 
 # Tell Capybara to talk to BookmarkManager
 Capybara.app = BookmarkManager
