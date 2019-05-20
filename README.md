@@ -16,6 +16,14 @@ When the controller gets the request, it asks the Bookmark class to give it all 
 The Bookmark class goes and gets the bookmarks, and gives back all the bookmarks in an array to the controller.
 The controller renders the array of bookmarks to a webpage, which it sends as a response to the user
 
+DATABASE SETUP - INSTRUCTIONS
+Anyone needing to setup the database from scratch will need to do the following things:
+
+Connect to psql
+Create the database using the psql command CREATE DATABASE bookmark_manager;
+Connect to the database using the pqsl command \c bookmark_manager;
+Run the query we have saved in the file 01_create_bookmarks_table.sql
+
 
 
 
@@ -35,3 +43,12 @@ NOTES:
 -------
 
 why is subject.all not representing the class bookmark in the test in bookmark_spec.rb?
+
+
+
+Viewing Bookmark step:
+
+We wrote a failing test.
+We solved the failing test with some easy code (an array in the controller).
+We refactored to an MVC pattern, implementing a view and a model called Bookmark, including writing a unit test for Bookmark.
+We used a RESTful route.
