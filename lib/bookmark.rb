@@ -1,12 +1,16 @@
+require 'pg'
+
 class Bookmark
 
 
   def self.all
-    [
-    "https://www.shortcutfoo.com",
-    "https://github.com/makersacademy",
-    "https://github.com/makersacademy/course"
-    ]
+    if ENV['ENVIRONMENT'] == 'test'
+      connection = PG.connect(dbname: 'bookmark_manager_test')
+    else
+      connection = PG.connect(dbname: 'bookmark_manager')
+    end
+    result = connection.exec('SELECT * FROM bookmarks')
+    result.map {|bookmark| bookmark['url'] }
   end
 
 end
