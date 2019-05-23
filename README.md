@@ -2,12 +2,24 @@ As a <Stakehoilder>
 So that <Motivation>,
 I'd like <Task>
 
+User story-1
 As a User,
 So that I can select Bookmarks,
 I'd like to view a list of my Bookmarks.
 
 Object | Message ===> This is a Domain Model
 Bookmarks | view list
+
+User Story-2
+As a User,
+So that I can collect my Bookmarks for retrevial,
+I'd like to add new Bookmarks to BookMarkManager.
+
+Object | Message ===>
+Bookmarks | create new bookmarks
+Bookmarks | Add new bookmarks
+
+
 
 file:///Users/vijaykurian/Desktop/Screenshot%202019-05-20%20at%2013.58.38.png
 

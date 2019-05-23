@@ -1,6 +1,16 @@
 
 # ENV['RACK_ENV'] = 'test'
+require_relative './setup_test_database'
+# Sets up the test enviornmane for the test db
 ENV['ENVIRONMENT'] = 'test'
+#runs setup_test_database before each spec
+
+RSpec.configure do|config|
+  config.before(:each) do
+    setup_test_database
+  end
+end
+
 # Bring in the contents of the `app.rb` file
 require File.join(File.dirname(__FILE__), '..', 'app.rb')
 
